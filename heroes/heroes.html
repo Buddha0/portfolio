@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8908ea6adb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./heroes.css">
+    <title>Hobbies</title>
+</head>
+
+<body>
+    <section class="hobbies-heading">
+
+        <nav>
+            <h1>Buddha</h1>
+            <ul>
+                <li><a href="../home/index.html">Home</a></li>
+                <li><a href="../heroes/heroes.html">Heroes</a></li>
+                <li><a href="../knowledge and education/education.html">Knowledge</a></li>
+                <li><a href="../gallery/gallery.html">Gallery</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <i class="fa-solid fa-bars-staggered" onclick="toggle()"></i>
+        </nav>
+
+        <div class="container">
+            <h1 class="title-h1">Heroes</h1>
+        </div>
+    </section>
+
+
+    <section class="heroes-section">
+
+        <div class="max-width">
+
+            <div class="heroes-description">
+                <h1>My Heroes</h1>
+                <p>Every one have their own super heroes who keeps them motivatied and want to be like them. For me,
+                    those super heroes would be my parents. They are very hardworking and have sacrificed a lot for our
+                    family happinees. I too want to be like my heroes and make them proud one day :).</p>
+            </div>
+
+            <div class="image-container">
+                <img src="" class="my_heroes" name="slider">
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-max-width">
+            <div class="footer-desc">
+                <h1 class="footer-h1">Buddha</h1>
+                <p class="footer-para">Herald College Portfolio</p>
+                <p class="footer-para">Copyright@2023</p>
+            </div>
+
+            <div class="contact-links">
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-discord"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+    <script>
+
+        var i = 0;
+        var images = [];
+        var time = 3000;
+
+        images[0] = '../images/mom_dad.jpg';
+        images[1] = '../images/mom_dad2.jpg';
+        images[2] = '../images/mom_dad3.jpg';
+
+        function slideshow() {
+            document.slider.src = images[i];
+            if (i < images.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("slideshow()", time);
+        }
+
+        window.onload = slideshow;
+    </script>
+
+</body>
+
+</html>

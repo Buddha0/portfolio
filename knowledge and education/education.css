@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Frank+Ruhl+Libre:wght@300;500;600&family=Nunito:wght@500;600&family=Roboto:wght@100;300;400&display=swap");
+
+/* ---------------------------------------------- */
+/* home section  also includes nav bar*/
+
+:root {
+  --heading-font-family: "Ruda", sans-serif;
+  --para-font-family: "Rubik", sans-serif;
+  --cursive-font-family: "Amatic SC", cursive;
+  --para2-font-familt: "Nunito", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hobbies-heading {
+  height: 70vh;
+  width: 100%;
+  background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.4),
+      rgba(50, 189, 199, 0.2)
+    ),
+    url("https://images.unsplash.com/photo-1519332978332-21b7d621d05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 15vh;
+  margin: auto;
+  position: relative;
+}
+
+nav h1 {
+  font-family: var(--heading-font-family);
+  font-size: 3rem;
+  word-spacing: 2rem;
+}
+
+nav li {
+  font-size: 1.8rem;
+  list-style: none;
+  padding: 0rem 0.5rem;
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--para-font-family);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title-h1 {
+  font-size: 5rem;
+  font-family: var(--cursive-font-family);
+  font-weight: 700;
+  letter-spacing: 1rem;
+}
+
+.fa-bars-staggered {
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Education sectionn start */
+.knowledge-section {
+  width: 100%;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.max-width {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1100px;
+  padding-top: 10rem;
+}
+
+.knowledge-description {
+  width: 40%;
+  text-align: left;
+}
+
+.knowledge-description h1 {
+  font-size: 3.5rem;
+  font-family: var(--para2-font-familt);
+  margin-bottom: 2.5rem;
+}
+.knowledge-description p {
+  line-height: 3rem;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+
+.image-container {
+  width: 250px;
+  height: 250px;
+}
+
+.books {
+  width: 100%;
+  height: 100%;
+}
+
+.knowledge-section {
+  width: 100%;
+  min-height: 60vh;
+  text-align: center;
+}
+
+.max-width {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1100px;
+  padding-top: 10rem;
+}
+
+.education-section {
+  width: 100%;
+  min-height: 60vh;
+  text-align: center;
+}
+.education-description {
+  width: 40%;
+  text-align: left;
+}
+
+.education-description h1 {
+  font-size: 3.5rem;
+  font-family: var(--para2-font-familt);
+  margin-bottom: 2.5rem;
+}
+.education-description p {
+  line-height: 3rem;
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+
+.max-width-2 {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  width: 100%;
+  max-width: 1100px;
+  padding-top: 10rem;
+}
+
+footer {
+  width: 100%;
+  height: 25vh;
+  background-color: #324a31;
+}
+
+.footer-max-width {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding-top: 3rem;
+}
+
+.footer-h1 {
+  color: white;
+  font-family: var(--heading-font-family);
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  word-spacing: 200px;
+}
+.footer-para {
+  font-family: var(--para-font-family);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2.5rem;
+}
+
+.fa-brands {
+  margin: 1.8rem 0.8rem;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 769px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  nav {
+    position: relative;
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0px 15px;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: rgb(119, 191, 201);
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .ul-show {
+    width: 70%;
+  }
+
+  nav ul li {
+    margin: 15px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+  }
+
+  nav ul li:hover {
+    background-color: rgb(255, 250, 250);
+  }
+
+  html {
+    font-size: 55%;
+  }
+
+  .fa-bars-staggered {
+    display: flex;
+  }
+  .footer-max-width {
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .max-width {
+    flex-direction: column-reverse;
+  }
+
+  .image-container {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+
+  .knowledge-description {
+    width: 90%;
+    margin: auto;
+  }
+
+  .max-width-2 {
+    flex-direction: column-reverse;
+    padding-bottom: 10rem;
+  }
+
+  .education-description {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  html {
+    font-size: 50%;
+  }
+  nav {
+    width: 90%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0px 15px;
+  }
+
+  .fa-bars-staggered {
+    display: flex;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: rgb(119, 191, 201);
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .ul-show {
+    width: 70%;
+  }
+
+  nav ul li {
+    margin: 15px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+  }
+
+  nav ul li:hover {
+    background-color: #ffffff;
+  }
+
+  .footer-max-width {
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  .max-width {
+    flex-direction: column-reverse;
+  }
+
+  .image-container {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+
+  .knowledge-description {
+    width: 95%;
+    margin: auto;
+  }
+
+  .max-width-2 {
+    flex-direction: column-reverse;
+    padding-bottom: 10rem;
+  }
+
+  .education-description {
+    width: 95%;
+    margin: auto;
+  }
+}
