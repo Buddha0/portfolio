@@ -12,6 +12,11 @@
   --para2-font-familt: "Nunito", sans-serif;
 }
 
+a{
+  color:white;
+}
+
+
 * {
   padding: 0;
   margin: 0;

@@ -1,24 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Frank+Ruhl+Libre:wght@300;500;600&family=Nunito:wght@500;600&family=Roboto:wght@100;300;400&display=swap");
 
 :root {
   --heading-font-family: "Ruda", sans-serif;
   --para-font-family: "Rubik", sans-serif;
+  --cursive-font-family: "Amatic SC", cursive;
+  --para2-font-familt: "Nunito", sans-serif;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+*{
+  padding:0;
+  margin:0;
   box-sizing: border-box;
 }
 
-html {
+
+html{
   font-size: 62.5%;
 }
 
-.contact {
-  height: 100vh;
-  width: 100%;
-  position: relative;
+body{
+  width:100%;
+  height:100vh;
+  background-color: rgb(163, 163, 163);
 }
 
 nav {
@@ -57,61 +62,100 @@ nav ul li a {
   display: none;
 }
 
+.fa-brands {
+  margin: 1.8rem 0.8rem;
+  font-size: 1.8rem;
+}
 
 .container{
-  display: flex;
-  width:100%;
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
 }
 
-.container-half{
-  width: 50%;
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+  background: url("../images/pexels-photo-8797307.jpeg") no-repeat center;
+	background-size: cover;
+  top:0;
+  left:0;
+  opacity: 0.3;
+	z-index: -1;
 }
 
-.form-container{
-    padding:10px;
-    text-align: center;
-    background-color: rgba(180, 186, 199, 0.5)
-}
 
-
-.form-title{
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
   font-size: 2rem;
-  color:white;
 }
 
-
-
-form{
-    width:100%;
-    text-align: center;
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #324a31;
+    transition:  0.5s ease;
 }
 
-
-.form-div{
-    padding:2rem;
-    width:100%;
- 
+h2:hover::after{
+  width:80px;
 }
 
-
-input{
-    width:100%;
-    padding:10px 10px;
-    border-left:none;
-    border-right:none;
-    border-top:none;
-    outline: none;
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+  font-size: 1.5rem;
 }
 
-
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
 
 textarea{
-    width:100%;
-    padding:10px 10px;
-    border-left:none;
-    border-right:none;
-    border-top:none;
-    outline: none;
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 1rem 1rem;
+  background-color: #324a31;
+	color: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+  font-size: 1.5rem;
+}
+
+.btn:hover{
+  background-color: #48af51;
+}
+
+.field:focus{
+    border: 2px solid rgba(53, 77, 216, 0.47);
+    background-color: #fff;
+}
+
+footer {
+  width: 100%;
+  height: 25vh;
+  background-color: #324a31;
 }
 
 .footer-max-width {
@@ -123,6 +167,7 @@ textarea{
   align-items: center;
   color: white;
   padding-top: 3rem;
+
 }
 
 .footer-h1 {
@@ -139,30 +184,53 @@ textarea{
   line-height: 2.5rem;
 }
 
-.send-message{
-    padding:10px 10px;
-    text-decoration: none;
-    background-color: rgb(32, 32, 32);
-    color:white;
-    font-size: 1.5rem;
-    border:none;
-    width:70%;
+.fa-brands {
+  margin: 1.8rem 0.8rem;
+  font-size: 1.8rem;
 }
 
 
-.send-message a{
-    text-decoration: none;
-    color:white;
+.contact-box{
+	max-width: 900px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+  margin: 20px auto;
+  margin-bottom: 15vh;
+  font-family: var(--heading-font-family);
+}
+
+
+
+.left{
+	 background: url("../images/pexels-photo-8797307.jpeg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+a{
+  color:white;
+}
+
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
   html {
     font-size: 55%;
-  }
-
-  .aboutMe-description {
-    width: 80%;
-    font-weight: 400;
   }
 }
 
@@ -187,7 +255,7 @@ textarea{
     justify-content: center;
     flex-direction: column;
     transition: 0.5s ease-in-out;
-    z-index: 999;
+    z-index: 1;
   }
 
   .ul-show {
@@ -207,30 +275,8 @@ textarea{
     background-color: rgb(255, 250, 250);
   }
 
-  .container {
-    max-width: 80%;
-  }
-
   html {
     font-size: 55%;
-  }
-
-  .aboutMe-description {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .aboutMe-description p {
-    font-weight: 400;
-    word-spacing: 1rem;
-  }
-
-  .home {
-    background: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 0.4),
-      rgba(50, 189, 199, 0.2)
-    );
   }
 
   .fa-bars-staggered {
@@ -240,6 +286,7 @@ textarea{
     width: 90%;
     justify-content: space-between;
   }
+ 
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -269,7 +316,7 @@ textarea{
     justify-content: center;
     flex-direction: column;
     transition: 0.5s ease-in-out;
-    z-index: 999;
+    z-index: 1;
   }
 
   .ul-show {
@@ -289,31 +336,11 @@ textarea{
     background-color: #ffffff;
   }
 
-  .container {
-    max-width: 100%;
-  }
-
-  .aboutMe-description {
-    width: 100%;
-  }
-  .aboutMe-description h1 {
-    line-height: 5rem;
-  }
-  .aboutMe-description p {
-    font-weight: 400;
-    word-spacing: 1rem;
-  }
-
-  .home {
-    background: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 0.4),
-      rgba(50, 189, 199, 0.2)
-    );
-  }
-
   .footer-max-width {
     width: 90%;
     justify-content: space-between;
   }
+
 }
+
+
